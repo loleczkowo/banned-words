@@ -7,7 +7,7 @@ Events.on(ClientLoadEvent, () => {
     Events.on(Packages.mindustry.game.EventType.PlayerChatEvent, e => {
         if (e.player == null) return;
 
-        const list = Core.settings.getString(bannedWordsSetting);
+        const list = Core.settings.getString("banned_words_list");
         if (!list) return;
 
         const bannedWords = list.split("\n").map(s => s.trim()).filter(s => s.length > 0);
@@ -23,7 +23,7 @@ Events.on(ClientLoadEvent, () => {
                     true,
                     result => {
                         const hours = result;
-                        const cmdTemplate = Core.settings.getString(commandSetting);
+                        const cmdTemplate = Core.settings.getString("banned_words_command");
                         const cmd = cmdTemplate
                             .replace("playerID", e.player.id)
                             .replace("hours", hours);

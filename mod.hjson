@@ -1,0 +1,8 @@
+name: Banned_words
+displayName: BANNED WORDS
+author: "[lime]loleczkowo[]"
+version: "1.0"
+minGameVersion: 136
+description: auto detects and asks for permition to ban users that use a banned word
+hidden: true
+clientOnly: true
